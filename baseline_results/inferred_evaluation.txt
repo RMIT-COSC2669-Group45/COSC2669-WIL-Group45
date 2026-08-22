@@ -1,0 +1,17 @@
+Walert Baseline Evaluation - Inferred Questions
+
+Command:
+python eval.py inferred ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+
+Results:
+
+Model                     NDCG@1    NDCG@3    NDCG@5
+
+walert_intent              0.0833    0.0391    0.0391
+walert.rag.bm25            0.1667    0.2566    0.3291
+walert.rag.dense.faiss     0.2500    0.2380    0.2380
+
+Observation:
+For inferred questions, the RAG approaches outperform the
+intent-based approach. Dense retrieval achieves the highest
+NDCG@1, while BM25 achieves the highest NDCG@3 and NDCG@5.

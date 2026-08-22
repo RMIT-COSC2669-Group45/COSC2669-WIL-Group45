@@ -1,0 +1,17 @@
+Walert Baseline Evaluation - Known Questions
+
+Command:
+python eval.py known ../../data/qrels.txt ../../target/runs/walert-intent.txt ../../target/runs/rag-bm25.txt ../../target/runs/rag-dense-faiss.txt
+
+Results:
+
+Model                     NDCG@1    NDCG@3    NDCG@5
+
+walert_intent              0.6429    0.3017    0.2180
+walert.rag.bm25            0.5119    0.4912    0.4733
+walert.rag.dense.faiss     0.6905    0.6119    0.5812
+
+Observation:
+The dense retrieval RAG system (walert.rag.dense.faiss) achieved
+the highest NDCG scores for known questions across NDCG@1,
+NDCG@3 and NDCG@5.
