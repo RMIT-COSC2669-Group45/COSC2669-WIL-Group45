@@ -4,8 +4,6 @@ Group ID: 45
 
 Group Name: The WIL-ing Project
 
-Group Name: The WIL-ing Project
-
 ## Team Members
 1. Aindrila Das Prapti
 2. Chethan Shankar
