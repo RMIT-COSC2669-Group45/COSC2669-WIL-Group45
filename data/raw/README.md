@@ -4,6 +4,11 @@ This folder contains original, unchanged copies of the official Victorian tenanc
 
 Each raw document should have a corresponding cleaned Markdown file in `data/cleaned/`.
 
+## Format:
+
+- Raw source: `cav_<topic>_001.pdf`
+- Cleaned source: `cav_<topic>_001.md`
+
 ## Naming example
 
 - Raw source: `cav_repairs_001.pdf`
