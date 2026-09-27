@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Local/editor files
+.vscode/
+.idea/
+
+# Local environment/config
+.env
+
+# Temporary files
+*.log
+*.tmp
+
+# Local backup requirements file
+requirements_m2_backup.txt
+
+# Generated tenancy retrieval artifacts
+target/embeddings/tenancy-*
+target/indexes/tenancy-*
