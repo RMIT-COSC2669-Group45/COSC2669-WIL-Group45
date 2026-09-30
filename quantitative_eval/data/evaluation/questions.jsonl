@@ -1,0 +1,20 @@
+{"query_id":"K01","type":"known","query":"What is the maximum bond amount?","relevant":["CAV_BOND_001_002"]}
+{"query_id":"K02","type":"known","query":"How long does a renter have to return the condition report?","relevant":["CAV_CONDITION_001_003"]}
+{"query_id":"K03","type":"known","query":"What heating must a rental property have?","relevant":["CAV_MINIMUM_STANDARDS_001_011"]}
+{"query_id":"K04","type":"known","query":"What reasons can make a notice to vacate invalid?","relevant":["CAV_NOTICE_TO_VACATE_001_003"]}
+{"query_id":"K05","type":"known","query":"How much notice is required before a rent increase?","relevant":["CAV_RENT_INCREASE_001_002"]}
+{"query_id":"K06","type":"known","query":"How much rent can a rental provider ask for in advance?","relevant":["CAV_RENT_PAYMENT_001_006"]}
+{"query_id":"K07","type":"known","query":"How much can a renter spend on an urgent repair themselves?","relevant":["CAV_REPAIRS_001_006","CAV_REPAIRS_001_011"]}
+{"query_id":"K08","type":"known","query":"Is there a cooling-off period after signing a rental agreement?","relevant":["CAV_SIGNING_RIGHTS_001_001"]}
+{"query_id":"I01","type":"inferred","query":"My landlord wants a bond of more than one month's rent. Is that normally allowed?","relevant":["CAV_BOND_001_002"]}
+{"query_id":"I02","type":"inferred","query":"I forgot to send back my condition report after moving in. How long did I have to return it?","relevant":["CAV_CONDITION_001_003"]}
+{"query_id":"I03","type":"inferred","query":"Does my rental have to have a fixed heater installed?","relevant":["CAV_MINIMUM_STANDARDS_001_011"]}
+{"query_id":"I04","type":"inferred","query":"Can my landlord kick me out just because I asked them to fix something?","relevant":["CAV_NOTICE_TO_VACATE_001_003"]}
+{"query_id":"I05","type":"inferred","query":"My landlord wants to raise my rent. How much warning do they need to give me?","relevant":["CAV_RENT_INCREASE_001_002"]}
+{"query_id":"I06","type":"inferred","query":"Can my landlord charge me extra just because I use their preferred way of paying rent?","relevant":["CAV_RENT_PAYMENT_001_002"]}
+{"query_id":"I07","type":"inferred","query":"Do I still have to pay rent while the landlord is getting repairs done?","relevant":["CAV_RENT_PAYMENT_001_008","CAV_REPAIRS_001_009"]}
+{"query_id":"I08","type":"inferred","query":"The toilet in my rental is broken. Does this count as an urgent repair?","relevant":["CAV_REPAIRS_001_004"]}
+{"query_id":"I09","type":"inferred","query":"An urgent repair will cost $3,000. Can I organise it myself and get the landlord to reimburse me?","relevant":["CAV_REPAIRS_001_012"]}
+{"query_id":"I10","type":"inferred","query":"My landlord has not fixed a normal repair after two weeks. What can I do?","relevant":["CAV_REPAIRS_001_013"]}
+{"query_id":"I11","type":"inferred","query":"I signed the lease but changed my mind the next day. Can I cancel it during a cooling-off period?","relevant":["CAV_SIGNING_RIGHTS_001_001"]}
+{"query_id":"I12","type":"inferred","query":"Can the rental provider put extra terms in the lease that conflict with the standard rental agreement?","relevant":["CAV_SIGNING_RIGHTS_001_003"]}
