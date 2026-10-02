@@ -61,6 +61,19 @@ The complete RAG pipeline was tested on 20 evaluation questions: 8 known questio
 
 Each test executed the full flow: Question → BM25 retrieval → Dense FAISS retrieval → Hybrid ranking → Evidence selection → Prompt construction → Ollama answer generation → Answer and source recording.
 
+Question Set    Retriever       NDCG@1   NDCG@3   NDCG@5
+Known            BM25           0.6250   0.6555   0.7632
+
+Known           Dense FAISS     0.3750   0.6655   0.6655
+
+Inferred         BM25           0.3333   0.4422   0.4781
+
+Inferred        Dense FAISS     0.6667   0.6870   0.6870
+
+Overall         BM25            0.4500   0.5275   0.5921
+
+Overall         Dense FAISS     0.5500   0.6784   0.6784
+
 The final evaluation completed all 20 questions. No generated answer was empty, and every result contained five retrieved evidence records. The generated results are stored in data/evaluation/rag_results/rag_answers.jsonl, with final answer-level evaluation information stored in data/evaluation/answer_evaluation_final.csv.
 
 7. Topics Tested
