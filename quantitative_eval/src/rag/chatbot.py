@@ -17,7 +17,7 @@ COLLECTION = Path("data/tenancy_collection/collection.jsonl")
 OLLAMA_URL = "http://localhost:11434/api/generate"
 OLLAMA_MODEL = "llama3.2:3b"
 
-TOP_K = 5
+TOP_K = 3
 CANDIDATE_K = 10
 
 
@@ -150,9 +150,14 @@ def select_evidence(query, candidates, documents):
 
     query_topics = set()
 
-    for topic, terms in topic_groups.items():
-        if query_terms & terms:
-            query_topics.add(topic)
+# Prefer specific compound topics over broad overlapping topics.
+    if (query_terms & {"rent"}and query_terms & {"increase", "raise", "warning", "notice"}):
+        query_topics.add("rent_increase")
+
+    else:
+        for topic, terms in topic_groups.items():
+            if query_terms & terms:
+                query_topics.add(topic)
 
     selected = []
 
@@ -170,10 +175,18 @@ def select_evidence(query, candidates, documents):
         topic_score = 0
 
         for topic in query_topics:
-            topic_terms = topic_groups[topic]
 
-            if text_terms & topic_terms:
-                topic_score += 1
+            if topic == "rent_increase":
+
+                # Prefer chunks from the rent-increase document.
+                if item["id"].startswith("CAV_RENT_INCREASE_"):
+                    topic_score += 3
+
+            else:
+                topic_terms = topic_groups[topic]
+
+                if text_terms & topic_terms:
+                    topic_score += 1
 
         item = item.copy()
 
@@ -182,14 +195,14 @@ def select_evidence(query, candidates, documents):
 
         selected.append(item)
 
-    selected.sort(
-        key=lambda x: (
-            x["topic_score"],
-            x["evidence_score"],
-            x["score"]
-        ),
-        reverse=True
-    )
+        selected.sort(
+            key=lambda x: (
+                x["topic_score"],
+                x["score"],
+                x["evidence_score"]
+            ),
+            reverse=True
+        )
 
     return selected[:TOP_K]
 

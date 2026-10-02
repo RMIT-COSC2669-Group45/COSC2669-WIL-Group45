@@ -6,7 +6,7 @@ INDEX = "target/indexes/tenancy-tct_colbert-v2-hnp-msmarco-faiss"
 QUERY_ENCODER = "castorini/tct_colbert-v2-hnp-msmarco"
 
 QUESTIONS = Path("data/evaluation/questions.jsonl")
-DOCIDS = Path("target/embeddings/tenancy-tct_colbert-v2-hnp-msmarco/docid")
+# DOCIDS = Path("target/embeddings/tenancy-tct_colbert-v2-hnp-msmarco/docid")
 OUTPUT = Path("data/evaluation/runs/tenancy-dense-faiss.txt")
 
 TOP_K = 5
@@ -15,8 +15,8 @@ TOP_K = 5
 def main():
     searcher = FaissSearcher(INDEX, QUERY_ENCODER)
 
-    with DOCIDS.open("r", encoding="utf-8") as f:
-        docids = [line.strip() for line in f if line.strip()]
+    #with DOCIDS.open("r", encoding="utf-8") as f:
+       # docids = [line.strip() for line in f if line.strip()]
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 

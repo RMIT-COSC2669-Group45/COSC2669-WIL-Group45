@@ -1,0 +1,21 @@
+﻿query_id,correctness,faithfulness,citation_support,abstention_quality,failure_type,notes
+K01,partial,partial,yes,not_applicable,faithfulness,Correct general bond rule but omits the >$900/week and VCAT higher-bond exception.
+K02,correct,correct,yes,not_applicable,none,Correctly states five business days.
+K03,correct,correct,yes,not_applicable,none,Correctly identifies required heating types.
+K04,correct,correct,yes,not_applicable,none,Correctly states that a notice without a valid reason is invalid.
+K05,correct,correct,yes,not_applicable,none,Correctly states at least 90 days.
+K06,correct,correct,yes,not_applicable,none,Final answer correctly states the general one-month limit and includes the weekly-payment and >$900/week exceptions.
+K07,correct,correct,yes,not_applicable,none,Correctly states the $2500 threshold; some repayment details omitted.
+K08,correct,correct,yes,not_applicable,none,Final answer directly states that there is no cooling-off period after the renter signs the agreement.
+I01,correct,correct,yes,not_applicable,none,Final answer directly gives the general rule that in most cases a bond cannot exceed one month's rent.
+I02,correct,correct,yes,not_applicable,none,Final answer directly states the five-business-day return period without the previous extraneous explanation.
+I03,correct,correct,yes,not_applicable,none,Correctly states fixed heater requirement and energy-efficiency requirement.
+I04,correct,correct,yes,not_applicable,none,Final run retrieves the notice-to-vacate evidence and states that a notice issued without a valid reason is not valid.
+I05,correct,correct,yes,not_applicable,none,Correctly states at least 90 days.
+I06,partial,mostly_correct,yes,not_applicable,faithfulness,"Final run retrieves the payment-platform fee rule and answers No, but the cited rule is specifically about fees charged by a third-party platform, so the answer is broader than the evidence stated."
+I07,correct,correct,yes,not_applicable,none,Correctly states rent must continue to be paid while waiting for repairs.
+I08,correct,correct,yes,not_applicable,none,Correctly identifies a blocked or broken toilet system as an urgent repair.
+I09,correct,correct,yes,not_applicable,none,Correctly applies the $2500 threshold to a $3000 repair.
+I10,correct,correct,yes,not_applicable,none,Correctly identifies available action after a normal repair is not completed within 14 days.
+I11,incorrect,incorrect,yes,inappropriate_abstention,abstention,"Direct cooling-off evidence is retrieved, but the final answer says 'None stated' instead of stating that there is no cooling-off period."
+I12,correct,correct,yes,not_applicable,none,Final answer states that a prohibited term cannot be enforced and notes that including a prohibited term may attract penalties.

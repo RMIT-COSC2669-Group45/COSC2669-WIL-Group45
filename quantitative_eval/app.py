@@ -20,7 +20,7 @@ st.set_page_config(
 )
 
 
-@st.cache_resource
+@st.experimental_singleton
 def load_rag():
     """Load the existing E7.2 RAG components once."""
 
@@ -83,7 +83,7 @@ question = st.text_area(
 )
 
 
-if st.button("Ask Question", type="primary"):
+if st.button("Ask Question"):
 
     if not question.strip():
         st.warning("Please enter a question.")
