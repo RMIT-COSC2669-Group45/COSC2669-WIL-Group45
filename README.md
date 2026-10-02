@@ -108,3 +108,6 @@ Python, Pyserini, BM25, FAISS, TCT-ColBERT query encoding, Retrieval-Augmented G
 The end-to-end prototype has been implemented, integrated and tested. Completed components include knowledge-base preparation, BM25 retrieval, dense FAISS retrieval, retrieval evaluation, hybrid retrieval, evidence selection, prompt construction, local LLM integration, automated RAG evaluation, answer-level evaluation, the Streamlit browser interface, and final integration testing.
 
 The prototype demonstrates a complete RAG workflow for retrieving and presenting Victorian residential tenancy information with supporting source evidence. Testing also identified that individual responses can still be improved through future refinement of evidence selection and answer generation.
+
+Key Results
+The final end-to-end evaluation processed 20 tenancy questions (8 known and 12 inferred). All 20 produced non-empty answers and each result contained five retrieved evidence records. Overall retrieval evaluation achieved NDCG@5 of 0.5921 for BM25 and 0.6784 for Dense FAISS. The completed prototype integrates hybrid retrieval, evidence selection, local Llama 3.2 generation through Ollama, and a Streamlit user interface.
